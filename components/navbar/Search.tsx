@@ -1,7 +1,6 @@
 "use client";
 
 import { BiSearch } from "react-icons/bi";
-import UserMenu from "./UserMenu";
 
 const Search = () => {
   return (
@@ -16,7 +15,6 @@ const Search = () => {
           <div className="p-2 bg-rose-500 rounded-full text-white">
             <BiSearch />
           </div>
-          <UserMenu />
         </div>
       </div>
     </div>
