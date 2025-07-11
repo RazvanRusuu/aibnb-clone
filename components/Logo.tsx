@@ -1,10 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-
 const Logo = () => {
-  const router = useRouter();
-
   return (
     <svg width="30" height="32" viewBox="0 0 1007 1080" className="block">
       <path
