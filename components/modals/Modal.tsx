@@ -67,7 +67,10 @@ const Modal: React.FC<IModal> = ({
       className="fixed inset-0 bg-neutral-800/70 z-50 overflow-x-hidden overflow-y-auto flex items-center justify-center outline-none focus:outline-none"
       onClick={handleClose}
     >
-      <div className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto h-full md:h-auto">
+      <div
+        className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto h-full md:h-auto"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div
           className={`duration-300 ${
             showModal ? "translate-y-0" : "translate-y-full"
