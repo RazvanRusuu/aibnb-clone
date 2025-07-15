@@ -19,7 +19,7 @@ const RegisterModal = () => {
   const {
     register,
     handleSubmit,
-    formState: { erros },
+    formState: { errors },
   } = useForm<FieldValues>({
     defaultValues: {
       name: "",
@@ -41,7 +41,13 @@ const RegisterModal = () => {
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading title="Welcome to Airbnb" subtitle="Create an account" />
-      <Input />
+      <Input
+        register={register}
+        label="Email"
+        id="email"
+        errors={errors}
+        required
+      />
     </div>
   );
 
