@@ -23,6 +23,7 @@ const Modal: React.FC<IModal> = ({
   onSubmit,
   title,
   body,
+  footer,
   actionLabel,
   disabled,
   secondaryAction,
@@ -102,6 +103,7 @@ const Modal: React.FC<IModal> = ({
                   onClick={handleSubmit}
                 />
               </div>
+              {footer}
             </div>
           </div>
         </div>

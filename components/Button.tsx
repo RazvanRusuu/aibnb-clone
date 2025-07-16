@@ -41,7 +41,7 @@ const Button: React.FC<IButton> = ({
         ${small ? "border-[1px]" : "border-2"}
         `}
     >
-      {Icon && <Icon size={24} className="absolute left-4 top-4" />}
+      {Icon && <Icon size={24} className="absolute left-4" />}
       <span>{label}</span>
     </button>
   );

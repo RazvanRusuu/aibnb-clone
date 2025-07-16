@@ -1,4 +1,3 @@
-import { forbidden } from "next/navigation";
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 import { BiDollar } from "react-icons/bi";
 
@@ -34,7 +33,7 @@ const Input = ({
       <input
         id={id}
         disabled={disabled}
-        {...register(id, { required })}
+        {...register!(id, { required })}
         placeholder=" "
         required={required}
         type={type}
@@ -72,6 +71,7 @@ const Input = ({
             peer-placeholder-shown:translate-y-0
             peer-focus:scale-75
             peer-focus:-translate-y-4
+            ${errors[id] ? "text-rose-500" : "text-zinc-400s"}
         `}
       >
         {label}
