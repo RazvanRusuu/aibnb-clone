@@ -69,7 +69,7 @@ const Modal: React.FC<IModal> = ({
       onClick={handleClose}
     >
       <div
-        className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto h-full md:h-auto"
+        className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto md:h-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div
@@ -82,7 +82,11 @@ const Modal: React.FC<IModal> = ({
           <div className="translate h-full md:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
             <div className="flex items-center p-6 rounded-t justify-center relative border-b-[1px]">
               <button className="p-1 border-0 hover:opacity-70 transition absolute left-9">
-                <IoMdClose onClick={handleClose} size={18} />
+                <IoMdClose
+                  className="cursor-pointer"
+                  onClick={handleClose}
+                  size={18}
+                />
               </button>
               <div className="text-lg font-semibold">{title}</div>
             </div>
