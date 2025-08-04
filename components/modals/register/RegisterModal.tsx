@@ -12,6 +12,7 @@ import Heading from "../../Heading";
 import Input from "../../Input";
 import { registerFields } from "./fields";
 import Button from "@/components/Button";
+import { signIn } from "next-auth/react";
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -47,7 +48,7 @@ const RegisterModal = () => {
         outline
         label="Continue with google"
         icon={FcGoogle}
-        onClick={() => {}}
+        onClick={() => signIn("google")}
       />
       <Button
         outline
