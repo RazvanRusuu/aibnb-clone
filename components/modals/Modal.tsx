@@ -65,7 +65,7 @@ const Modal: React.FC<IModal> = ({
 
   return (
     <div
-      className="fixed inset-0 bg-neutral-800/70 z-50 overflow-x-hidden overflow-y-auto flex items-center justify-center outline-none focus:outline-none"
+      className="fixed inset-0 bg-neutral-800/70 z-50 flex items-center justify-center outline-none focus:outline-none"
       onClick={handleClose}
     >
       <div
@@ -74,9 +74,10 @@ const Modal: React.FC<IModal> = ({
       >
         <div
           className={`duration-300 ${
-            showModal ? "translate-y-0" : "translate-y-full"
+            showModal
+              ? "translate-y-0 opacity-100"
+              : "translate-y-full opacity-0"
           }
-          ${showModal ? "opacity-100" : "opacity-0"}
           `}
         >
           <div className="translate h-full md:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
